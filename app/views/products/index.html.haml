@@ -10,12 +10,12 @@
           %dd= truncate(strip_tags(product.description), |
               length: 80)                               |
       %td.list_actions
-        = link_to 'Show', product
+        = link_to 'Show', product, {:class => 'btn btn-primary'}
         %br/
-        = link_to 'Edit', edit_product_path(product)
+        = link_to 'Edit', edit_product_path(product), {:class => 'btn btn-info'}
         %br/
-        = link_to 'Destroy', product, |
+        = link_to 'Destroy', product, {:class => 'btn btn-danger'}, |
           confirm: 'Are you sure?',   |
           method: :delete             |
 %br/
-= link_to 'New product', new_product_path
+= link_to 'New product', new_product_path, {:class => 'btn btn-primary'}
